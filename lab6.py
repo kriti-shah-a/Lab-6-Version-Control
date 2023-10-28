@@ -3,11 +3,11 @@
 def main():
     condition = True
 
-    while condition:
-        print('Menu\n-------------\n1. Encode\n2. Decode\n3. Quit')
+    while condition: #Loop function
+        print('Menu\n-------------\n1. Encode\n2. Decode\n3. Quit') #Menu
         user_input = int(input('Please enter an option: '))
 
-        if user_input == 1:
+        if user_input == 1: #Encoder option
             password = input('Please enter your password to encode: ')
             encoded = encoder(password)
             print('Your password has been encoded and stored!')
