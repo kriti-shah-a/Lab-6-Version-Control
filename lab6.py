@@ -1,15 +1,15 @@
 # Kriti Shah and Matthew Toro
 def encoder(password):  # Encoder function, returns encoded password
-    x = []
-    y = ''
+    x = []  # empty list
+    y = ''  # empty string
 
-    for i in range(0, len(password)):
-        x.append(int(password[i]) + 3)
+    for i in range(0, len(password)):  # for every index in password
+        x.append(int(password[i]) + 3)  # add 3 to every value in password and append to the list
 
-    for i in x:
-        y += str(i)
+    for i in x:  # in the list x, for every value of i
+        y += str(i)  # add the i as a string to y
 
-    return y
+    return y  # return the string that has added 3 for each number
 
 
 def decoded(password):  # Decoder function, inverse of encoder
