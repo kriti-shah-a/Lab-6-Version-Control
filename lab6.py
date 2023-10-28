@@ -14,7 +14,7 @@ def main():
             print()
 
         if user_input == 2:
-            print('The encoded password is' + str(encoded) + ', and the original password is ' + str(decoder(encoded)) + '.')
+            print('The encoded password is ' + str(encoded) + ', and the original password is ' + str(decoded(encoded)) + '.')
             print()
 
         if user_input == 3:
@@ -23,20 +23,29 @@ def main():
 
 def encoder(password):
     x = []
+    y = ''
 
     for i in range(0, len(password)):
         x.append(int(password[i])+3)
 
-    return str(x)
+    for i in x:
+        y += str(i)
 
+    return y
 
-def decoder(password):
+def decoded(password):
     x = []
+    y = ''
 
     for i in range(0, len(password)):
         x.append(int(password[i])-3)
 
-    return str(x)
+    for i in x:
+        y += str(i)
+
+    return y
+
+
 
 
 if __name__ == '__main__':
