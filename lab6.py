@@ -8,14 +8,13 @@ def main():
         user_input = int(input('Please enter an option: '))
 
         if user_input == 1:
-            password = int(input('Please enter your password to encode: '))
+            password = input('Please enter your password to encode: ')
             encoded = encoder(password)
             print('Your password has been encoded and stored!')
             print()
 
         if user_input == 2:
-            password = int(input('Please enter your password to decoded: '))
-            print('The encoded password is' + str(encoded) + ', and the original password is ' + str(decoder(password)) + '.')
+            print('The encoded password is' + str(encoded) + ', and the original password is ' + str(decoder(encoded)) + '.')
             print()
 
         if user_input == 3:
@@ -23,18 +22,21 @@ def main():
 
 
 def encoder(password):
-    for i in range(0, len(str(password))):
-        if str(password)[i].isdigit():
-            password[i] += 3
-    return password
+    x = []
+
+    for i in range(0, len(password)):
+        x.append(int(password[i])+3)
+
+    return str(x)
 
 
 def decoder(password):
-    for i in range(0, len(password)):
-        if password[i].isdigit():
-            password[i] -= 3
+    x = []
 
-    return password
+    for i in range(0, len(password)):
+        x.append(int(password[i])-3)
+
+    return str(x)
 
 
 if __name__ == '__main__':
