@@ -30,17 +30,17 @@ def main():   # the main function
 
     while condition:  # Loop function
         print('Menu\n-------------\n1. Encode\n2. Decode\n3. Quit')  # Print the Menu
-        user_input = int(input('Please enter an option: '))
+        user_input = int(input('Please enter an option: '))  # asking for user input
 
         if user_input == 1:  # Encoder option
             password = input('Please enter your password to encode: ')
-            encoded = encoder(password)
+            encoded = encoder(password)  # storing the password encoded
             print('Your password has been encoded and stored!')
             print()
 
-        if user_input == 2:  # Decoder
+        if user_input == 2:  # Decoder option
             print('The encoded password is ' + str(encoded) + ', and the original password is ' + str(
-                decoded(encoded)) + '.')
+                decoded(encoded)) + '.')  # sharing the encoded password and using the decoder function
             print()
 
         if user_input == 3:  # Exit function
