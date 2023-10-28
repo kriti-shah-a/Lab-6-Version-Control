@@ -9,13 +9,13 @@ def main():
 
         if user_input == 1:
             password = int(input('Please enter your password to encode: '))
-            password = encoder(password)
+            encoded = encoder(password)
             print('Your password has been encoded and stored!')
             print()
 
         if user_input == 2:
             password = int(input('Please enter your password to decoded: '))
-            print('The encoded password is' + str(password) + ', and the original password is ' + str(decoder(password)) + '.')
+            print('The encoded password is' + str(encoded) + ', and the original password is ' + str(decoder(password)) + '.')
             print()
 
         if user_input == 3:
@@ -24,9 +24,8 @@ def main():
 
 def encoder(password):
     for i in range(0, len(str(password))):
-        if password[i].isdigit():
+        if str(password)[i].isdigit():
             password[i] += 3
-
     return password
 
 
