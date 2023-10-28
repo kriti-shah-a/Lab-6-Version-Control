@@ -13,15 +13,15 @@ def main():
             print('Your password has been encoded and stored!')
             print()
 
-        if user_input == 2:
+        if user_input == 2: #Decoder
             print('The encoded password is ' + str(encoded) + ', and the original password is ' + str(decoded(encoded)) + '.')
             print()
 
-        if user_input == 3:
+        if user_input == 3: #Exit function
             exit()
 
 
-def encoder(password):
+def encoder(password): #Encoder function, returns encoded password
     x = []
     y = ''
 
@@ -33,7 +33,7 @@ def encoder(password):
 
     return y
 
-def decoded(password):
+def decoded(password): #Decoder function, inverse of encoder
     x = []
     y = ''
 
@@ -46,7 +46,5 @@ def decoded(password):
     return y
 
 
-
-
-if __name__ == '__main__':
+if __name__ == '__main__': #Main
     main()
