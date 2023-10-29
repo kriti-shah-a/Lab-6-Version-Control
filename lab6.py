@@ -1,15 +1,16 @@
 # Kriti Shah and Matthew Toro
-def encoder(password):  # Encoder function, returns encoded password
-    x = []  # empty list
-    y = ''  # empty string
 
-    for i in range(0, len(password)):  # for every index in password
-        x.append(int(password[i]) + 3)  # add 3 to every value in password and append to the list
+def encoder(password):
 
-    for i in x:  # in the new form list x with values add 3, for every value of i in x
-        y += str(i)  # add the i as a string to string y
+    new_password = ''
 
-    return y  # return the string that has added 3 for each number
+    for digit in password:
+        if digit.isdigit():
+            number = int(digit)
+            encode = number + 3
+            password += str(encode)
+
+    return new_password
 
 
 def decoded(password):  # Decoder function, inverse of encoder
@@ -26,10 +27,13 @@ def decoded(password):  # Decoder function, inverse of encoder
 
 
 def main():   # the main function
-    condition = True
 
-    while condition:  # Loop function
-        print('Menu\n-------------\n1. Encode\n2. Decode\n3. Quit')  # Print the Menu
+    while True:  # Loop function
+        print('Menu')
+        print('-------------')
+        print('1. Encode')
+        print('2. Decode')
+        print('3. Quit')  # Print the Menu
         user_input = int(input('Please enter an option: '))  # asking for user input
 
         if user_input == 1:  # Encoder option
@@ -39,12 +43,12 @@ def main():   # the main function
             print()
 
         if user_input == 2:  # Decoder option
-            print('The encoded password is ' + str(encoded) + ', and the original password is ' + str(
-                decoded(encoded)) + '.')  # sharing the encoded password and using the decoder function
+            # sharing the encoded password and using the decoder function
+            print(f'The encoded password is {str(encoded)} and the original password is {str(decoded(encoded))}.')  #
             print()
 
         if user_input == 3:  # Exit function
-            exit()
+            break
 
 
 if __name__ == '__main__':  # Main
