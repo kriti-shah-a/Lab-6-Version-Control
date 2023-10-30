@@ -1,6 +1,6 @@
 # Kriti Shah and Matthew Toro
 # hello
-def encoder():  # Encoder function, adding three
+def encoder(password):  # Encoder function, adding three
     new_password = ''
 
     for digit in password:  # all the digit in password
