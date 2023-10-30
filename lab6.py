@@ -1,6 +1,4 @@
 # Kriti Shah and Matthew Toro
-#hello
-
 def encoder(password):  # Encoder function, adding three
     new_password = ''
 
@@ -24,8 +22,6 @@ def decoded(password):  # Decoder function, inverse of encoder
         y += str(i)  # add the i as a string to string y
 
     return y  # return the string that has subtracted 3 for each number
-
-# hello
 
 def main():
     while True:  # Loop function
