@@ -1,4 +1,6 @@
 # Kriti Shah and Matthew Toro
+#hello
+
 def encoder(password):  # Encoder function, adding three
     new_password = ''
 
@@ -10,8 +12,6 @@ def encoder(password):  # Encoder function, adding three
             new_password += str(encode)  # turn each encoded digit to a string and add to the new password str
 
     return new_password  # return the new string
-
-
 
 def decoded(password):  # Decoder function, inverse of encoder
     x = []
@@ -25,8 +25,7 @@ def decoded(password):  # Decoder function, inverse of encoder
 
     return y  # return the string that has subtracted 3 for each number
 
-def main():  # the main function
-
+def main():
     while True:  # Loop function
         print('Menu')
         print('-------------')
@@ -48,6 +47,7 @@ def main():  # the main function
 
         if user_input == 3:  # Exit function
             break
+
 
 if __name__ == '__main__':  # Main
     main()
