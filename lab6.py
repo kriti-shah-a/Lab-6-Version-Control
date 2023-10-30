@@ -43,7 +43,7 @@ def main():
 
         if user_input == 2:  # Decoder option
             # sharing the encoded password and using the decoder function
-            print(f'The encoded password is {str(encoded)} and the original password is {str(decoded(encoded))}.')  #
+            print(f'The encoded password is {str(encoded)}, and the original password is {str(decoded(encoded))}.')  #
             print()
 
         if user_input == 3:  # Exit function
