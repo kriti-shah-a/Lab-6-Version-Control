@@ -1,16 +1,6 @@
 # Kriti Shah and Matthew Toro
 
-def encoder(password):  # Encoder function, adding three
-    new_password = ''
 
-    for digit in password:  # all the digit in password
-
-        if digit.isdigit():  # if the digits are a digit
-            number = int(digit)  # the digit makes it into an integer = number
-            encode = number + 3  # make the encode by adding three to the digits
-            new_password += str(encode)  # turn each encoded digit to a string and add to the new password str
-
-    return new_password  # return the new string
 
 
 def decoded(password):  # Decoder function, inverse of encoder
